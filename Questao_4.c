@@ -2,48 +2,43 @@
 
 int main(){
     char nivel;
-    float salario;
+    float salario_atual;
+    float salario_inicial;
     float percentual;
-    float salarionovo;
+    float salario_novo;
 
 
     printf("Por favor, insira o nivel do funcionario:");
     scanf("%c", &nivel);
 
 
-    /*while(nivel != 'a' || nivel != 'c' || nivel != 'c'){
-        printf("Erro!\nTente novamente com um nivel de funcionario valido('a', 'b' ou 'c').\n");
-        printf("Por favor, insira um novo nivel de funcionario:");
-        scanf("%c", &nivel);
-    }*/
+    while(nivel != 'a' && nivel != 'b' && nivel != 'c'){
+        printf("Erro!\nTente novamente com um nivel de funcionario valido('a', 'b' ou 'c').\nPor favor, insira um novo nivel de funcionario:");
+        scanf(" %c", &nivel);
+    }
 
 
     printf("Por favor, insira o salario atual do funcionario em R$:");
-    scanf("%.2f", &salario);
+    scanf("%f", &salario_atual);
+
+
+    salario_inicial = salario_atual;
 
 
     switch(nivel){
-        case 'a': 
-            percentual = 0.05;
-            salarionovo = salario * percentual;
-            printf("Salario inicial R$ %.2f\n", salario);                                   //Por quê o salário salva como 0?
-            printf("Salario apos o aumento: R$ %.2f.\n", salarionovo);                      // 0 pois multiplicou o percentual por 0.
-            printf("Percentual:%.2f%.\n", percentual * 100);                                //Demonstrativo do percentual.
+        case 'a':
+            percentual = 1.05;                                                                  
             break;
         case 'b': 
-            percentual = 0.07;
-            salarionovo = salario * percentual;
-            printf("Salario apos o aumento: R$%.2f.\n", salarionovo);
+            percentual = 1.07;
             break;
-        case 'c': 
-            percentual = 0.08;
-            salarionovo = salario * percentual;
-            printf("Salario apos o aumento: R$%.2f.\n", salarionovo);
+        case 'c':
+            percentual = 1.08;
             break;
-        default:
-            printf("Erro!\nTente novamente com um nivel de funcionario valido('a', 'b' ou 'c').\n");
     }
 
+    salario_novo = salario_inicial * percentual;
+    printf("Salario apos o aumento: R$ %.2f.\n", salario_novo);
 
 return 0;
 }
