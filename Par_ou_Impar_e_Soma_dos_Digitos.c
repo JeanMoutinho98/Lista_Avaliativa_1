@@ -4,6 +4,7 @@ int main(){
     int numero, n, soma = 0, digito;
     
 
+    printf("Insira um numero:"); 
     scanf("%d", &numero);
 
 
@@ -25,7 +26,7 @@ int main(){
     }
     
 
-    printf("A soma dos algarismos de %d eh %d\n", numero, soma); 
+    printf("A soma dos algarismos de %d eh igual a %d\n", numero, soma); 
 
 
 return 0;

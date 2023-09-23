@@ -4,7 +4,10 @@ int main(){
     int a, b;
 
 
+    printf("Insira dois valores\n");
+    printf("Primeiro valor:");
     scanf("%d", &a);
+    printf("Segundo valor:");
     scanf("%d", &b);
 
 
@@ -30,5 +33,5 @@ int main(){
     }
 
 
-return 0;   
+    return 0;
 }

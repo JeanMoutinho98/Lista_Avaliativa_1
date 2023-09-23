@@ -8,9 +8,17 @@ int main(){
     float salario_novo;
 
 
+    printf("Por favor, insira o nivel do funcionario:");
     scanf("%c", &nivel);
 
 
+    while(nivel != 'a' && nivel != 'b' && nivel != 'c'){
+        printf("Erro!\nTente novamente com um nivel de funcionario valido('a', 'b' ou 'c').\nPor favor, insira um novo nivel de funcionario:");
+        scanf(" %c", &nivel);
+    }
+
+
+    printf("Por favor, insira o salario atual do funcionario em R$:");
     scanf("%f", &salario_atual);
 
 
@@ -30,7 +38,7 @@ int main(){
     }
 
     salario_novo = salario_inicial * percentual;
-    printf("R$ %.2f.\n", salario_novo);
+    printf("Salario apos o aumento: R$ %.2f.\n", salario_novo);
 
 return 0;
 }
