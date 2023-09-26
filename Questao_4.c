@@ -30,7 +30,7 @@ int main(){
     }
 
     salario_novo = salario_inicial * percentual;
-    printf("R$ %.2f.\n", salario_novo);
+    printf("R$ %.2f\n", salario_novo);
 
 return 0;
 }

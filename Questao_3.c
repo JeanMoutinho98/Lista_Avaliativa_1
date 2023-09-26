@@ -10,18 +10,18 @@ int main(){
     senha_valida = cadastro;
 
 
-    printf("Senha cadastrada: %d\n", senha_valida);
+    printf("senha cadastrada: %d\n", senha_valida);
     scanf("%d", &tentativa);
 
 
     while(tentativa != senha_valida){
-        printf("Senha invalida!\n");
+        printf("senha invalida!\n");
         scanf("%d", &tentativa);
     }
 
 
     if(tentativa = senha_valida){
-        printf("Senha valida!\n");
+        printf("senha valida!\n");
     }
 
     
